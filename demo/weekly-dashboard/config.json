@@ -1,0 +1,10 @@
+{
+  "site_name": "Benjamin's at The Landsby",
+  "currency": "£",
+  "targets": {
+    "external_share_cap": 0.25,
+    "labour_pct_band": [0.30, 0.40],
+    "food_cost_pct_band": [0.30, 0.35],
+    "spend_per_head_min": 20.0
+  }
+}

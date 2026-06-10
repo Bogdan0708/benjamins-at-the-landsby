@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Benjamin&#x27;s at The Landsby — weekly dashboard</title>
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; color: #222; margin: 24px auto; max-width: 960px; }
+  header { display: flex; justify-content: space-between; align-items: baseline;
+            border-bottom: 3px double #1f3a2d; padding-bottom: 8px; }
+  h1 { font-size: 22px; margin: 0; color: #1f3a2d; }
+  .watermark { background: #fff3cd; border: 1px solid #b8860b; color: #7a5800;
+                padding: 3px 10px; font: 12px sans-serif; border-radius: 3px; }
+  .week { font: 13px sans-serif; color: #555; }
+  .kpis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin: 16px 0; }
+  .kpi { border: 1px solid #ccc; border-radius: 4px; padding: 8px; }
+  .kpi-label { font: 11px sans-serif; color: #555; text-transform: uppercase; }
+  .kpi-value { font-size: 19px; margin-top: 4px; }
+  .sub { font: 11px sans-serif; color: #777; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  h2 { font-size: 14px; color: #1f3a2d; border-bottom: 1px solid #ddd; padding-bottom: 3px; }
+  .chart rect { fill: #1f3a2d; }
+  .chart .lbl, .chart .val { font: 10px sans-serif; fill: #444; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  td { padding: 3px 6px; border-bottom: 1px solid #eee; }
+  td:last-child { text-align: right; }
+  ul { margin: 4px 0 4px 18px; padding: 0; font-size: 12px; }
+  footer { margin-top: 18px; border-top: 1px solid #ccc; font: 12px sans-serif; color: #555; }
+  .note { margin-top: 6px; }
+  @media print { body { margin: 0; } @page { size: A4; margin: 12mm; } }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Benjamin&#x27;s at The Landsby — weekly dashboard</h1>
+    <div class="week">Week ending Sunday 7 June 2026</div>
+  </div>
+  <div class="watermark">SAMPLE DATA — synthetic, for demonstration</div>
+</header>
+<div class="kpis"><div class="kpi"><div class="kpi-label">Covers (week)</div><div class="kpi-value">300</div></div><div class="kpi"><div class="kpi-label">Revenue (week)</div><div class="kpi-value">£7,011</div></div><div class="kpi"><div class="kpi-label">Spend per head</div><div class="kpi-value">£23.37</div></div><div class="kpi"><div class="kpi-label">External share</div><div class="kpi-value">9% <span class="sub">cap 25%</span></div></div><div class="kpi"><div class="kpi-label">Labour %</div><div class="kpi-value">39%</div></div><div class="kpi"><div class="kpi-label">Survey food/service/value</div><div class="kpi-value">4.5 / 4.4 / 4.2</div></div></div>
+<div class="cols">
+  <section><h2>Covers by daypart (this week)</h2><svg viewBox="0 -18 460 194" class="chart" role="img"><rect x="6" y="0" width="141" height="140" rx="2"/><text x="76" y="156" text-anchor="middle" class="lbl">Lunch</text><text x="76" y="-5" text-anchor="middle" class="val">152</text><rect x="159" y="56" width="141" height="84" rx="2"/><text x="229" y="156" text-anchor="middle" class="lbl">Afternoon</text><text x="229" y="51" text-anchor="middle" class="val">91</text><rect x="312" y="88" width="141" height="52" rx="2"/><text x="382" y="156" text-anchor="middle" class="lbl">Evening</text><text x="382" y="83" text-anchor="middle" class="val">57</text></svg></section>
+  <section><h2>Revenue by week</h2><svg viewBox="0 -18 460 194" class="chart" role="img"><rect x="6" y="6" width="45" height="134" rx="2"/><text x="28" y="156" text-anchor="middle" class="lbl">19 Apr</text><text x="28" y="1" text-anchor="middle" class="val">£7,987</text><rect x="63" y="1" width="45" height="139" rx="2"/><text x="85" y="156" text-anchor="middle" class="lbl">26 Apr</text><text x="85" y="-4" text-anchor="middle" class="val">£8,301</text><rect x="120" y="7" width="45" height="133" rx="2"/><text x="142" y="156" text-anchor="middle" class="lbl">03 May</text><text x="142" y="2" text-anchor="middle" class="val">£7,931</text><rect x="177" y="7" width="45" height="133" rx="2"/><text x="199" y="156" text-anchor="middle" class="lbl">10 May</text><text x="199" y="2" text-anchor="middle" class="val">£7,934</text><rect x="234" y="0" width="45" height="140" rx="2"/><text x="256" y="156" text-anchor="middle" class="lbl">17 May</text><text x="256" y="-5" text-anchor="middle" class="val">£8,367</text><rect x="291" y="6" width="45" height="134" rx="2"/><text x="313" y="156" text-anchor="middle" class="lbl">24 May</text><text x="313" y="1" text-anchor="middle" class="val">£8,014</text><rect x="348" y="10" width="45" height="130" rx="2"/><text x="370" y="156" text-anchor="middle" class="lbl">31 May</text><text x="370" y="5" text-anchor="middle" class="val">£7,796</text><rect x="405" y="23" width="45" height="117" rx="2"/><text x="427" y="156" text-anchor="middle" class="lbl">07 Jun</text><text x="427" y="18" text-anchor="middle" class="val">£7,011</text></svg></section>
+</div>
+<div class="cols">
+  <section><h2>Leading indicators (this week)</h2><table><tr><td>Google Business Profile views</td><td>340</td></tr><tr><td>Google Business Profile clicks</td><td>27</td></tr><tr><td>Online bookings (week)</td><td>63</td></tr><tr><td>No-show rate</td><td>3%</td></tr><tr><td>Flash-survey responses</td><td>12</td></tr><tr><td>Online reviews (all platforms, total)</td><td>24</td></tr><tr><td>Private dining / event enquiries</td><td>0</td></tr></table></section>
+  <section><h2>Not yet tracked</h2>
+    <p class="sub">Shown honestly rather than estimated; each gains a source as systems data becomes available.</p>
+    <ul><li>Resident dining frequency (visits/apartment/month)</li><li>Events &amp; private dining revenue</li><li>Food cost % (needs the purchasing/Apicbase export)</li><li>Repeat-booking rate (needs booking history with guest identity)</li><li>Club/society pipeline (contacted → visited → booked)</li></ul>
+  </section>
+</div>
+<footer><strong>Data quality</strong><div class="note">Square settlements (week, net of fees): £7,035 vs POS revenue £7,011 — differences are card fees, cash sales and any missing export days.</div><div class="note">No sales data for: Tuesday 2 June (open day(s) with no rows in the export).</div><div class="note">3 row(s) skipped as unreadable:<ul><li>cubigo-sales.csv line 7450: unreadable date &#x27;2026-13-01&#x27;</li><li>cubigo-sales.csv line 7451: unreadable net &#x27;&#x27;</li><li>cubigo-sales.csv line 7452: unreadable covers &#x27;two&#x27;</li></ul></div></footer>
+</body>
+</html>

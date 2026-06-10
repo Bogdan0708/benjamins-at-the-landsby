@@ -1,0 +1,98 @@
+{
+  "2026-04-19": {
+    "labour_cost": 2845.0,
+    "labour_hours": 223,
+    "reviews": {
+      "google": 3,
+      "tripadvisor": 4,
+      "opentable": 11
+    },
+    "gbp_views": 125,
+    "gbp_clicks": 10,
+    "enquiries": 1
+  },
+  "2026-04-26": {
+    "labour_cost": 2803.25,
+    "labour_hours": 220,
+    "reviews": {
+      "google": 3,
+      "tripadvisor": 4,
+      "opentable": 11
+    },
+    "gbp_views": 146,
+    "gbp_clicks": 11,
+    "enquiries": 0
+  },
+  "2026-05-03": {
+    "labour_cost": 2843.81,
+    "labour_hours": 226,
+    "reviews": {
+      "google": 4,
+      "tripadvisor": 4,
+      "opentable": 11
+    },
+    "gbp_views": 180,
+    "gbp_clicks": 14,
+    "enquiries": 2
+  },
+  "2026-05-10": {
+    "labour_cost": 2819.38,
+    "labour_hours": 224,
+    "reviews": {
+      "google": 4,
+      "tripadvisor": 4,
+      "opentable": 12
+    },
+    "gbp_views": 221,
+    "gbp_clicks": 17,
+    "enquiries": 2
+  },
+  "2026-05-17": {
+    "labour_cost": 2730.28,
+    "labour_hours": 218,
+    "reviews": {
+      "google": 5,
+      "tripadvisor": 4,
+      "opentable": 12
+    },
+    "gbp_views": 258,
+    "gbp_clicks": 20,
+    "enquiries": 1
+  },
+  "2026-05-24": {
+    "labour_cost": 2770.84,
+    "labour_hours": 218,
+    "reviews": {
+      "google": 5,
+      "tripadvisor": 5,
+      "opentable": 12
+    },
+    "gbp_views": 289,
+    "gbp_clicks": 23,
+    "enquiries": 1
+  },
+  "2026-05-31": {
+    "labour_cost": 2765.64,
+    "labour_hours": 215,
+    "reviews": {
+      "google": 6,
+      "tripadvisor": 5,
+      "opentable": 13
+    },
+    "gbp_views": 308,
+    "gbp_clicks": 24,
+    "enquiries": 1
+  },
+  "2026-06-07": {
+    "labour_cost": 2714.2,
+    "labour_hours": 221,
+    "reviews": {
+      "google": 6,
+      "tripadvisor": 5,
+      "opentable": 13
+    },
+    "gbp_views": 340,
+    "gbp_clicks": 27,
+    "enquiries": 0
+  }
+}
