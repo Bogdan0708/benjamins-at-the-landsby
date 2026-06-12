@@ -282,11 +282,9 @@ The plan asks for almost no capital — but it does need access, authority and a
 
 ### Resident-protection controls (hard rules, not aspirations)
 
-1. **Priority booking:** residents and their guests can book any time; external bookings open a fixed window later (e.g. 14 days out) and never displace a resident request.
-2. **Protected capacity:** a defined resident zone of tables at every service, and resident-only periods where demand warrants (e.g. weekday lunch core hours).
-3. **External cap per service:** external bookings capped as a percentage of covers per service — set in line with the 20–25% overall share target in §6, lower at peak resident times, higher only for designated occasions (e.g. Sunday lunch) with GM agreement.
-4. **Arrival process:** external guests are received via concierge/reception, signed in and shown through — preserving security and the tone of the building.
-5. **Communication before change:** every pilot or change of hours is communicated to residents in advance and reviewed with the dining committee; their feedback is part of each pilot's gates.
+1. **The capacity guarantee:** however busy we get, a resident can always get a table. External bookings are capped per service — set in line with the 20–25% overall share target in §6, lower at peak resident times, higher only for designated occasions (e.g. Sunday lunch) with GM agreement. Because outside covers are limited by design, residents and their guests can book — or simply walk in — at any time; one number in the booking diary that anyone on the desk can operate.
+2. **Arrival process:** external guests are received via concierge/reception, signed in and shown through — preserving security and the tone of the building.
+3. **Communication before change:** every pilot or change of hours is communicated to residents in advance and reviewed with the dining committee; their feedback is part of each pilot's gates.
 
 ### Compliance and governance
 
