@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Benjamin&#x27;s at The Landsby — Pilot gate tracker</title>
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; color: #222; margin: 24px auto; max-width: 960px; }
+  header { display: flex; justify-content: space-between; align-items: baseline;
+            border-bottom: 3px double #1f3a2d; padding-bottom: 8px; }
+  h1 { font-size: 22px; margin: 0; color: #1f3a2d; }
+  .watermark { background: #fff3cd; border: 1px solid #b8860b; color: #7a5800;
+                padding: 3px 10px; font: 12px sans-serif; border-radius: 3px; }
+  .week { font: 13px sans-serif; color: #555; }
+  .kpis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin: 16px 0; }
+  .kpi { border: 1px solid #ccc; border-radius: 4px; padding: 8px; }
+  .kpi-label { font: 11px sans-serif; color: #555; text-transform: uppercase; }
+  .kpi-value { font-size: 19px; margin-top: 4px; }
+  .sub { font: 11px sans-serif; color: #777; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  h2 { font-size: 14px; color: #1f3a2d; border-bottom: 1px solid #ddd; padding-bottom: 3px; }
+  .chart rect { fill: #1f3a2d; }
+  .chart .lbl, .chart .val { font: 10px sans-serif; fill: #444; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  td { padding: 3px 6px; border-bottom: 1px solid #eee; }
+  td:last-child { text-align: right; }
+  ul { margin: 4px 0 4px 18px; padding: 0; font-size: 12px; }
+  footer { margin-top: 18px; border-top: 1px solid #ccc; font: 12px sans-serif; color: #555; }
+  .note { margin-top: 6px; }
+  @media print { body { margin: 0; } @page { size: A4; margin: 12mm; } }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Benjamin&#x27;s at The Landsby — Pilot gate tracker</h1>
+    <div class="week">week ending Sunday 7 June</div>
+  </div>
+  <div class="watermark">SAMPLE DATA — synthetic, for demonstration</div>
+</header>
+
+<style>
+  .framing { font: 13px sans-serif; color: #555; margin: 6px 0 14px; }
+  .gates { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 12px 0; }
+  .gate { display: grid; grid-template-columns: 1.4fr 1fr 90px 1.3fr;
+          align-items: center; gap: 12px; border: 1px solid #ddd;
+          border-left-width: 6px; border-radius: 4px; padding: 8px 12px; }
+  .gate .metric { font-size: 14px; }
+  .gate .value { font-size: 18px; font-weight: bold; }
+  .gate .chip { font: 11px sans-serif; text-transform: uppercase; letter-spacing: 0.5px;
+                text-align: center; padding: 3px 0; border-radius: 3px; color: #fff; }
+  .gate .thresholds { font: 11px sans-serif; color: #666; text-align: right; }
+  .gate.green { border-left-color: #1f7a3d; }
+  .gate.green .chip { background: #1f7a3d; }
+  .gate.amber { border-left-color: #b8860b; }
+  .gate.amber .chip { background: #b8860b; }
+  .gate.red { border-left-color: #a3261c; }
+  .gate.red .chip { background: #a3261c; }
+  .gate.untracked { border-left-color: #999; background: #f6f6f6; }
+  .gate.untracked .metric, .gate.untracked .thresholds { color: #777; }
+  .gate.untracked .value { color: #999; font-weight: normal; font-size: 14px; }
+  .gate.untracked .chip { background: #888; }
+</style>
+<h2>Pilot gate tracker — RAG against pre-agreed gates</h2><p class="framing">This is the mechanism for the plan&#x27;s Sunday-lunch pilot. Each gate, its green and amber thresholds, and its direction of merit are pre-agreed in config.json before a pilot week runs. When the pilot is live, that week&#x27;s figures plug straight in and the panel turns green, amber or red against the same gates. Shown here is the latest trading week as a worked example. A gate with no data source is shown as not-yet-tracked, never estimated.</p><p>Latest trading week: <strong>week ending Sunday 7 June</strong>. Net revenue this week: <strong>£7,011.40</strong>.</p><div class="gates"><div class="gate green"><div class="metric">Covers (guests)</div><div class="value">300</div><div class="chip">On gate</div><div class="thresholds">green ≥ 280 · amber ≥ 240</div></div><div class="gate amber"><div class="metric">Spend per head</div><div class="value">£23.37</div><div class="chip">Watch</div><div class="thresholds">green ≥ £24 · amber ≥ £21</div></div><div class="gate red"><div class="metric">Labour as % of net</div><div class="value">38.7%</div><div class="chip">Off gate</div><div class="thresholds">green ≤ 32% · amber ≤ 38%</div></div><div class="gate green"><div class="metric">Guest satisfaction (1-5)</div><div class="value">4.36</div><div class="chip">On gate</div><div class="thresholds">green ≥ 4.3 · amber ≥ 4</div></div><div class="gate untracked"><div class="metric">Repeat bookings</div><div class="value">—</div><div class="chip">Not yet tracked</div><div class="thresholds">no source</div></div></div>
+<footer><strong>Data quality</strong><div class="note">2 data-quality note(s):<ul><li>cubigo-sales.csv line 7451: unreadable net &#x27;&#x27;</li><li>cubigo-sales.csv line 7452: unreadable covers &#x27;two&#x27;</li></ul></div></footer>
+</body>
+</html>

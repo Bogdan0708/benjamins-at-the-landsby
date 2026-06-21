@@ -1,0 +1,8 @@
+{
+  "site_name": "Benjamin's at The Landsby",
+  "themes": {
+    "service": ["staff", "service", "looked after", "attentive", "care"],
+    "food_quality": ["lovely", "lunch", "tasty", "delicious", "fresh"],
+    "soup_consistency": ["soup", "salty", "bland", "cold"]
+  }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Benjamin&#x27;s at The Landsby — Allergen Matrix</title>
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; color: #222; margin: 24px auto; max-width: 960px; }
+  header { display: flex; justify-content: space-between; align-items: baseline;
+            border-bottom: 3px double #1f3a2d; padding-bottom: 8px; }
+  h1 { font-size: 22px; margin: 0; color: #1f3a2d; }
+  .watermark { background: #fff3cd; border: 1px solid #b8860b; color: #7a5800;
+                padding: 3px 10px; font: 12px sans-serif; border-radius: 3px; }
+  .week { font: 13px sans-serif; color: #555; }
+  .kpis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin: 16px 0; }
+  .kpi { border: 1px solid #ccc; border-radius: 4px; padding: 8px; }
+  .kpi-label { font: 11px sans-serif; color: #555; text-transform: uppercase; }
+  .kpi-value { font-size: 19px; margin-top: 4px; }
+  .sub { font: 11px sans-serif; color: #777; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  h2 { font-size: 14px; color: #1f3a2d; border-bottom: 1px solid #ddd; padding-bottom: 3px; }
+  .chart rect { fill: #1f3a2d; }
+  .chart .lbl, .chart .val { font: 10px sans-serif; fill: #444; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  td { padding: 3px 6px; border-bottom: 1px solid #eee; }
+  td:last-child { text-align: right; }
+  ul { margin: 4px 0 4px 18px; padding: 0; font-size: 12px; }
+  footer { margin-top: 18px; border-top: 1px solid #ccc; font: 12px sans-serif; color: #555; }
+  .note { margin-top: 6px; }
+  @media print { body { margin: 0; } @page { size: A4; margin: 12mm; } }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Benjamin&#x27;s at The Landsby — Allergen Matrix</h1>
+    <div class="week">13 dishes x 14 allergens</div>
+  </div>
+  <div class="watermark">SAMPLE DATA — synthetic, for demonstration</div>
+</header>
+
+<h2>Allergen Compliance Matrix</h2>
+<p class="caption">Generated from Apicbase costings. Compliance lookup for front-of-house and kitchen staff.
+All 14 UK statutory allergens are shown; a tick (&#10003;) indicates the dish contains that allergen.
+Verify against the current Apicbase recipe record before advising a guest.</p>
+<div class="matrix-wrap">
+<table class="allergen-table">
+<caption>Benjamin's Allergen Matrix &mdash; 13 dishes &times; 14 allergens</caption>
+<thead><tr><th class="dish-col">Dish</th><th class="allergen-col">celery</th><th class="allergen-col">gluten (cereals)</th><th class="allergen-col">crustaceans</th><th class="allergen-col">eggs</th><th class="allergen-col">fish</th><th class="allergen-col">lupin</th><th class="allergen-col">milk</th><th class="allergen-col">molluscs</th><th class="allergen-col">mustard</th><th class="allergen-col">tree nuts</th><th class="allergen-col">peanuts</th><th class="allergen-col">sesame</th><th class="allergen-col">soya</th><th class="allergen-col">sulphur dioxide</th></tr></thead>
+<tbody><tr><td class="dish-name">Coffee</td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td></tr><tr><td class="dish-name">Fish pie</td><td class="tick"></td><td class="tick"></td><td class="tick">&#10003;</td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td></tr><tr><td class="dish-name">Fruit crumble</td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td></tr><tr><td class="dish-name">Glass of house wine</td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick">&#10003;</td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick">&#10003;</td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td></tr><tr><td class="dish-name">Grilled salmon</td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick">&#10003;</td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td></tr><tr><td class="dish-name">Matzo ball soup</td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td></tr><tr><td class="dish-name">Paneer &amp; spinach curry</td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick">&#10003;</td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick">&#10003;</td><td class="tick"></td><td class="tick"></td></tr><tr><td class="dish-name">Pot of tea</td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td></tr><tr><td class="dish-name">Roast chicken</td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick">&#10003;</td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick">&#10003;</td><td class="tick">&#10003;</td><td class="tick">&#10003;</td><td class="tick"></td><td class="tick"></td><td class="tick"></td></tr><tr><td class="dish-name">Shepherd&#x27;s pie</td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td></tr><tr><td class="dish-name">Soup of the day</td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick">&#10003;</td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick">&#10003;</td><td class="tick"></td><td class="tick"></td><td class="tick">&#10003;</td></tr><tr><td class="dish-name">Sticky toffee pudding</td><td class="tick">&#10003;</td><td class="tick">&#10003;</td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick">&#10003;</td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick">&#10003;</td></tr><tr><td class="dish-name">Vegetable biryani</td><td class="tick"></td><td class="tick"></td><td class="tick">&#10003;</td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick">&#10003;</td><td class="tick">&#10003;</td><td class="tick"></td><td class="tick"></td><td class="tick"></td><td class="tick">&#10003;</td><td class="tick"></td></tr></tbody>
+<tfoot><tr class="count-row"><td class="dish-col"><em>Dishes affected</em></td><td class="count">1</td><td class="count">1</td><td class="count">2</td><td class="count">1</td><td class="count">1</td><td class="count">1</td><td class="count">1</td><td class="count">3</td><td class="count">2</td><td class="count">2</td><td class="count">2</td><td class="count">1</td><td class="count">1</td><td class="count">2</td></tr></tfoot>
+</table>
+</div>
+<style>
+  .matrix-wrap { overflow-x: auto; }
+  .allergen-table { border-collapse: collapse; font-size: 11px; width: 100%; }
+  .allergen-table th, .allergen-table td { border: 1px solid #ccc; padding: 4px 6px; }
+  .allergen-table thead th { background: #1f3a2d; color: #fff; text-align: center; vertical-align: bottom; }
+  .dish-col { text-align: left; min-width: 160px; font-weight: bold; }
+  .allergen-col { writing-mode: vertical-rl; transform: rotate(180deg); white-space: nowrap;
+                   height: 110px; min-width: 28px; text-align: left; }
+  .dish-name { white-space: nowrap; }
+  .tick { text-align: center; font-size: 14px; color: #b30000; font-weight: bold; }
+  .count-row td { background: #f0f4f2; font-weight: bold; text-align: center; }
+  .count-row .dish-col { text-align: left; }
+  .caption { font-size: 12px; color: #444; margin-bottom: 10px; }
+  @media print {
+    .allergen-table { font-size: 9px; }
+    .allergen-col { height: 80px; }
+  }
+</style>
+
+<footer><strong>Data quality</strong><div class="note">All rows read; no data-quality issues detected.</div></footer>
+</body>
+</html>

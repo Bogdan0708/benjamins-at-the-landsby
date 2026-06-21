@@ -1,0 +1,267 @@
+{
+  "window": {
+    "start": "2026-04-13",
+    "end": "2026-06-07"
+  },
+  "weeks": {
+    "2026-04-19": {
+      "covers": 342,
+      "net_revenue": 7986.6,
+      "external_covers": 9,
+      "external_share": 0.0263,
+      "spend_per_head": 23.35,
+      "labour_pct": 0.3562
+    },
+    "2026-04-26": {
+      "covers": 360,
+      "net_revenue": 8300.7,
+      "external_covers": 16,
+      "external_share": 0.0444,
+      "spend_per_head": 23.06,
+      "labour_pct": 0.3377
+    },
+    "2026-05-03": {
+      "covers": 347,
+      "net_revenue": 7930.6,
+      "external_covers": 24,
+      "external_share": 0.0692,
+      "spend_per_head": 22.85,
+      "labour_pct": 0.3586
+    },
+    "2026-05-10": {
+      "covers": 339,
+      "net_revenue": 7934.5,
+      "external_covers": 13,
+      "external_share": 0.0383,
+      "spend_per_head": 23.41,
+      "labour_pct": 0.3553
+    },
+    "2026-05-17": {
+      "covers": 360,
+      "net_revenue": 8366.8,
+      "external_covers": 14,
+      "external_share": 0.0389,
+      "spend_per_head": 23.24,
+      "labour_pct": 0.3263
+    },
+    "2026-05-24": {
+      "covers": 349,
+      "net_revenue": 8028.75,
+      "external_covers": 21,
+      "external_share": 0.0602,
+      "spend_per_head": 23.01,
+      "labour_pct": 0.3451
+    },
+    "2026-05-31": {
+      "covers": 346,
+      "net_revenue": 7796.25,
+      "external_covers": 20,
+      "external_share": 0.0578,
+      "spend_per_head": 22.53,
+      "labour_pct": 0.3547
+    },
+    "2026-06-07": {
+      "covers": 300,
+      "net_revenue": 7011.4,
+      "external_covers": 26,
+      "external_share": 0.0867,
+      "spend_per_head": 23.37,
+      "labour_pct": 0.3871
+    }
+  },
+  "totals": {
+    "covers": 2745,
+    "net_revenue": 63370.1,
+    "external_share": 0.0521
+  },
+  "days": {
+    "2026-04-13": {
+      "covers": 34,
+      "net_revenue": 816.8
+    },
+    "2026-04-14": {
+      "covers": 54,
+      "net_revenue": 1187.95
+    },
+    "2026-04-15": {
+      "covers": 55,
+      "net_revenue": 1292.75
+    },
+    "2026-04-16": {
+      "covers": 57,
+      "net_revenue": 1363.0
+    },
+    "2026-04-17": {
+      "covers": 69,
+      "net_revenue": 1628.75
+    },
+    "2026-04-18": {
+      "covers": 73,
+      "net_revenue": 1697.35
+    },
+    "2026-04-20": {
+      "covers": 31,
+      "net_revenue": 772.35
+    },
+    "2026-04-21": {
+      "covers": 57,
+      "net_revenue": 1318.7
+    },
+    "2026-04-22": {
+      "covers": 58,
+      "net_revenue": 1340.8
+    },
+    "2026-04-23": {
+      "covers": 62,
+      "net_revenue": 1399.25
+    },
+    "2026-04-24": {
+      "covers": 78,
+      "net_revenue": 1782.1
+    },
+    "2026-04-25": {
+      "covers": 74,
+      "net_revenue": 1687.5
+    },
+    "2026-04-27": {
+      "covers": 30,
+      "net_revenue": 692.3
+    },
+    "2026-04-28": {
+      "covers": 52,
+      "net_revenue": 1155.9
+    },
+    "2026-04-29": {
+      "covers": 50,
+      "net_revenue": 1141.3
+    },
+    "2026-04-30": {
+      "covers": 64,
+      "net_revenue": 1513.1
+    },
+    "2026-05-01": {
+      "covers": 68,
+      "net_revenue": 1536.3
+    },
+    "2026-05-02": {
+      "covers": 83,
+      "net_revenue": 1891.7
+    },
+    "2026-05-04": {
+      "covers": 33,
+      "net_revenue": 791.25
+    },
+    "2026-05-05": {
+      "covers": 50,
+      "net_revenue": 1242.3
+    },
+    "2026-05-06": {
+      "covers": 50,
+      "net_revenue": 1156.85
+    },
+    "2026-05-07": {
+      "covers": 59,
+      "net_revenue": 1404.35
+    },
+    "2026-05-08": {
+      "covers": 72,
+      "net_revenue": 1648.15
+    },
+    "2026-05-09": {
+      "covers": 75,
+      "net_revenue": 1691.6
+    },
+    "2026-05-11": {
+      "covers": 28,
+      "net_revenue": 630.9
+    },
+    "2026-05-12": {
+      "covers": 56,
+      "net_revenue": 1296.7
+    },
+    "2026-05-13": {
+      "covers": 61,
+      "net_revenue": 1472.7
+    },
+    "2026-05-14": {
+      "covers": 60,
+      "net_revenue": 1393.75
+    },
+    "2026-05-15": {
+      "covers": 72,
+      "net_revenue": 1641.3
+    },
+    "2026-05-16": {
+      "covers": 83,
+      "net_revenue": 1931.45
+    },
+    "2026-05-18": {
+      "covers": 32,
+      "net_revenue": 769.55
+    },
+    "2026-05-19": {
+      "covers": 58,
+      "net_revenue": 1346.55
+    },
+    "2026-05-20": {
+      "covers": 52,
+      "net_revenue": 1134.0
+    },
+    "2026-05-21": {
+      "covers": 56,
+      "net_revenue": 1278.05
+    },
+    "2026-05-22": {
+      "covers": 69,
+      "net_revenue": 1602.2
+    },
+    "2026-05-23": {
+      "covers": 82,
+      "net_revenue": 1898.4
+    },
+    "2026-05-25": {
+      "covers": 29,
+      "net_revenue": 701.65
+    },
+    "2026-05-26": {
+      "covers": 55,
+      "net_revenue": 1254.3
+    },
+    "2026-05-27": {
+      "covers": 56,
+      "net_revenue": 1227.15
+    },
+    "2026-05-28": {
+      "covers": 62,
+      "net_revenue": 1471.1
+    },
+    "2026-05-29": {
+      "covers": 69,
+      "net_revenue": 1483.0
+    },
+    "2026-05-30": {
+      "covers": 75,
+      "net_revenue": 1659.05
+    },
+    "2026-06-01": {
+      "covers": 29,
+      "net_revenue": 688.95
+    },
+    "2026-06-03": {
+      "covers": 58,
+      "net_revenue": 1390.2
+    },
+    "2026-06-04": {
+      "covers": 63,
+      "net_revenue": 1460.85
+    },
+    "2026-06-05": {
+      "covers": 77,
+      "net_revenue": 1781.8
+    },
+    "2026-06-06": {
+      "covers": 73,
+      "net_revenue": 1689.6
+    }
+  }
+}

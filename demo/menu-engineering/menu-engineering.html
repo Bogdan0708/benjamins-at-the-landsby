@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Benjamin&#x27;s at The Landsby — Menu engineering matrix</title>
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; color: #222; margin: 24px auto; max-width: 960px; }
+  header { display: flex; justify-content: space-between; align-items: baseline;
+            border-bottom: 3px double #1f3a2d; padding-bottom: 8px; }
+  h1 { font-size: 22px; margin: 0; color: #1f3a2d; }
+  .watermark { background: #fff3cd; border: 1px solid #b8860b; color: #7a5800;
+                padding: 3px 10px; font: 12px sans-serif; border-radius: 3px; }
+  .week { font: 13px sans-serif; color: #555; }
+  .kpis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin: 16px 0; }
+  .kpi { border: 1px solid #ccc; border-radius: 4px; padding: 8px; }
+  .kpi-label { font: 11px sans-serif; color: #555; text-transform: uppercase; }
+  .kpi-value { font-size: 19px; margin-top: 4px; }
+  .sub { font: 11px sans-serif; color: #777; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  h2 { font-size: 14px; color: #1f3a2d; border-bottom: 1px solid #ddd; padding-bottom: 3px; }
+  .chart rect { fill: #1f3a2d; }
+  .chart .lbl, .chart .val { font: 10px sans-serif; fill: #444; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  td { padding: 3px 6px; border-bottom: 1px solid #eee; }
+  td:last-child { text-align: right; }
+  ul { margin: 4px 0 4px 18px; padding: 0; font-size: 12px; }
+  footer { margin-top: 18px; border-top: 1px solid #ccc; font: 12px sans-serif; color: #555; }
+  .note { margin-top: 6px; }
+  @media print { body { margin: 0; } @page { size: A4; margin: 12mm; } }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Benjamin&#x27;s at The Landsby — Menu engineering matrix</h1>
+    <div class="week">product mix x unit margin</div>
+  </div>
+  <div class="watermark">SAMPLE DATA — synthetic, for demonstration</div>
+</header>
+
+<style>
+  .scatter { width: 100%; height: auto; margin: 8px 0 4px; }
+  .scatter .axis { stroke: #999; stroke-width: 1; }
+  .scatter .median { stroke: #b8860b; stroke-width: 1; stroke-dasharray: 4 3; }
+  .scatter .qlbl { font: 10px sans-serif; fill: #999; text-transform: uppercase; letter-spacing: .5px; }
+  .scatter .axt { font: 11px sans-serif; fill: #555; }
+  .scatter .plbl { font: 9px sans-serif; fill: #333; }
+  .explain { font: 13px sans-serif; color: #555; }
+  td.q { font: 11px sans-serif; }
+</style>
+<h2>Menu engineering — popularity x margin</h2><p class="explain">Each item is placed by sales volume (popularity) against gross margin. The crosshair is the menu median for each axis. Stars earn their place; plowhorses sell but thin; puzzles are profitable but overlooked; dogs do neither. A decision aid for the manager and head chef — never a reason to drop a resident favourite.</p><p>13 menu items. Median units 473, median margin £6. 2 stars, 5 plowhorses, 5 puzzles, 1 dogs.</p><svg viewBox="0 0 524 354" class="scatter" role="img" aria-label="Popularity by margin scatter"><line x1="48" y1="18" x2="48" y2="318" class="axis"/><line x1="48" y1="318" x2="508" y2="318" class="axis"/><line x1="278.8" y1="18" x2="278.8" y2="318" class="median"/><line x1="48" y1="154.1" x2="508" y2="154.1" class="median"/><text x="504" y="30" text-anchor="end" class="qlbl">Stars</text><text x="52" y="30" text-anchor="start" class="qlbl">Puzzles</text><text x="504" y="312" text-anchor="end" class="qlbl">Plowhorses</text><text x="52" y="312" text-anchor="start" class="qlbl">Dogs</text><text x="278.0" y="348" text-anchor="middle" class="axt">Units sold &rarr;</text><text x="12" y="168.0" text-anchor="middle" class="axt" transform="rotate(-90 12 168.0)">Margin per unit &rarr;</text><circle cx="473.9" cy="261.9" r="5" fill="#7a5800"/><text x="473.9" y="253.9" text-anchor="middle" class="plbl">Coffee</text><circle cx="462.7" cy="259.4" r="5" fill="#7a5800"/><text x="462.7" y="251.4" text-anchor="middle" class="plbl">Pot of tea</text><circle cx="415.9" cy="219.1" r="5" fill="#7a5800"/><text x="415.9" y="211.1" text-anchor="middle" class="plbl">Glass of house wine</text><circle cx="363.2" cy="167.7" r="5" fill="#7a5800"/><text x="363.2" y="159.7" text-anchor="middle" class="plbl">Soup of the day</text><circle cx="347.1" cy="154.1" r="5" fill="#1f3a2d"/><text x="347.1" y="146.1" text-anchor="middle" class="plbl">Matzo ball soup</text><circle cx="291.5" cy="205.0" r="5" fill="#7a5800"/><text x="291.5" y="197.0" text-anchor="middle" class="plbl">Fruit crumble</text><circle cx="278.8" cy="47.6" r="5" fill="#1f3a2d"/><text x="278.8" y="39.6" text-anchor="middle" class="plbl">Roast chicken</text><circle cx="278.3" cy="65.0" r="5" fill="#3a5a7a"/><text x="278.3" y="57.0" text-anchor="middle" class="plbl">Fish pie</text><circle cx="277.3" cy="194.9" r="5" fill="#8a3a3a"/><text x="277.3" y="186.9" text-anchor="middle" class="plbl">Sticky toffee pudding</text><circle cx="273.4" cy="96.3" r="5" fill="#3a5a7a"/><text x="273.4" y="88.3" text-anchor="middle" class="plbl">Vegetable biryani</text><circle cx="272.4" cy="40.2" r="5" fill="#3a5a7a"/><text x="272.4" y="32.2" text-anchor="middle" class="plbl">Grilled salmon</text><circle cx="272.4" cy="82.2" r="5" fill="#3a5a7a"/><text x="272.4" y="74.2" text-anchor="middle" class="plbl">Shepherd&#x27;s pie</text><circle cx="251.9" cy="92.8" r="5" fill="#3a5a7a"/><text x="251.9" y="84.8" text-anchor="middle" class="plbl">Paneer &amp; spinach curry</text></svg><table><tr><td><strong>Item</strong></td><td><strong>Units</strong></td><td><strong>Unit price</strong></td><td><strong>Margin</strong></td><td><strong>Margin %</strong></td><td><strong>Quadrant</strong></td></tr><tr><td>Coffee</td><td>873</td><td>£3</td><td>£2</td><td>69%</td><td class="q">Plowhorse</td></tr><tr><td>Pot of tea</td><td>850</td><td>£3</td><td>£2</td><td>66%</td><td class="q">Plowhorse</td></tr><tr><td>Glass of house wine</td><td>754</td><td>£6</td><td>£4</td><td>66%</td><td class="q">Plowhorse</td></tr><tr><td>Soup of the day</td><td>646</td><td>£8</td><td>£6</td><td>69%</td><td class="q">Plowhorse</td></tr><tr><td>Matzo ball soup</td><td>613</td><td>£9</td><td>£6</td><td>67%</td><td class="q">Star</td></tr><tr><td>Fruit crumble</td><td>499</td><td>£6</td><td>£4</td><td>66%</td><td class="q">Plowhorse</td></tr><tr><td>Roast chicken</td><td>473</td><td>£14</td><td>£10</td><td>68%</td><td class="q">Star</td></tr><tr><td>Fish pie</td><td>472</td><td>£14</td><td>£9</td><td>67%</td><td class="q">Puzzle</td></tr><tr><td>Sticky toffee pudding</td><td>470</td><td>£6</td><td>£5</td><td>70%</td><td class="q">Dog</td></tr><tr><td>Vegetable biryani</td><td>462</td><td>£12</td><td>£8</td><td>68%</td><td class="q">Puzzle</td></tr><tr><td>Grilled salmon</td><td>460</td><td>£15</td><td>£10</td><td>68%</td><td class="q">Puzzle</td></tr><tr><td>Shepherd&#x27;s pie</td><td>460</td><td>£13</td><td>£9</td><td>67%</td><td class="q">Puzzle</td></tr><tr><td>Paneer &amp; spinach curry</td><td>418</td><td>£12</td><td>£8</td><td>66%</td><td class="q">Puzzle</td></tr></table>
+<footer><strong>Data quality</strong><div class="note">1 data-quality note(s):<ul><li>cubigo-sales.csv line 7451: unreadable net &#x27;&#x27;</li></ul></div></footer>
+</body>
+</html>

@@ -11,7 +11,7 @@ Date: June 2026
 
 Pillar 5 of the plan commits to extracting full value from the systems the group already runs — Cubigo, Apicbase, Monika, Square and our OpenTable listing — supported by internal tools I would build personally, at no software cost. This catalogue sets out exactly what those tools are, what each one reads and produces, the estimated build effort, and when each lands against the 90-day plan.
 
-A working demonstration of the first tool — the weekly one-page dashboard, built on clearly labelled synthetic sample data — is available on request.
+Working demonstrations of all thirteen tools are available on request — each built on clearly labelled synthetic sample data, each a self-contained folder that turns ordinary file exports into a single page. Because every tool draws on the same underlying figures, the numbers reconcile across the whole suite; the weekly one-page dashboard is the worked example carried through this catalogue.
 
 ## Operating principles
 
@@ -30,7 +30,7 @@ Every tool in this catalogue is built to the same rules:
 |---|------|------------------|---------|-------|------------|-------------|
 | 1 | **Weekly one-page dashboard** | Cubigo sales, OpenTable bookings, Square settlements, flash-survey exports → one printed page | Manager + GM | Every review meeting starts from the same trusted page; no re-keying | Days 15–30 ("dashboard v1 live") | 2–3 days |
 | 2 | Daily sales flash | Cubigo export → yesterday vs same weekday last week, top/bottom sellers | Manager + head chef | Good and bad days spotted while they can still be acted on | Days 15–30 | 1 day |
-| 3 | Cubigo↔Square reconciliation | Both exports → mismatch report (voids, settlement gaps) | Manager | Voids, refunds and keying errors caught early | Days 15–30 | 1 day |
+| 3 | Cubigo↔Square reconciliation | Both exports → card-settlement coverage report (out-of-band days, coverage gaps, fee-integrity exceptions) | Manager | Settlement anomalies caught early without false alarms on normal account billing | Days 15–30 | 1 day |
 | 4 | Menu-engineering matrix | Cubigo product mix + Apicbase costings → popularity/margin quadrants | Manager + head chef | Menu decisions made on margin, not hunch | Days 31–60 | 2 days |
 | 5 | Demand forecast for rotas | Bookings + covers history → next-week covers by daypart | Manager | Rotas matched to demand; the lever on labour % | Days 31–60 | 2 days |
 | 6 | Allergen matrix sheet | Apicbase export → printable staff lookup | All FOH + kitchen | Compliance answers in seconds, always current | Days 31–60 | 1 day |
@@ -41,7 +41,7 @@ Every tool in this catalogue is built to the same rules:
 **Notes on selected tools:**
 
 - **1 — Weekly dashboard.** The centrepiece: covers and revenue by daypart, resident vs external share against the agreed cap, spend per head, labour percentage, review counts and the plan's leading indicators — one page, produced the same way every Monday morning. Figures the systems cannot yet provide (for example resident dining frequency) are shown as "not yet tracked", never estimated. The page also discloses its own data quality: any unreadable rows or missing days are listed in the footer.
-- **3 — Reconciliation.** Flags differences between what the till says was sold and what the card processor settled — the quiet check that catches voids, refunds and keying errors early.
+- **3 — Reconciliation.** Reconciles *card-settlement coverage*, not literal till-to-bank equality: because residents largely bill to their account, Square settles only a share of total till takings, so the tool flags days where that share falls outside an agreed band, days missing a settlement either way, and any Square row where gross minus fees doesn't equal net. The quiet check that surfaces a genuine void, refund or keying error without crying wolf over normal account billing.
 - **5 — Demand forecast.** Deliberately a weighted moving average by day-of-week and daypart, with manual flags for bank holidays and events — not machine learning. With under a year of history, a transparent average a manager can interrogate beats a model nobody can.
 - **8 — Gate tracker.** The Sunday lunch pilot's success gates (covers, spend, labour, satisfaction, repeat bookings) evaluated automatically each week from the same exports — so the stop/scale decision at week 8 is read off a panel, not argued about.
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Benjamin&#x27;s at The Landsby — Feedback Theming</title>
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; color: #222; margin: 24px auto; max-width: 960px; }
+  header { display: flex; justify-content: space-between; align-items: baseline;
+            border-bottom: 3px double #1f3a2d; padding-bottom: 8px; }
+  h1 { font-size: 22px; margin: 0; color: #1f3a2d; }
+  .watermark { background: #fff3cd; border: 1px solid #b8860b; color: #7a5800;
+                padding: 3px 10px; font: 12px sans-serif; border-radius: 3px; }
+  .week { font: 13px sans-serif; color: #555; }
+  .kpis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin: 16px 0; }
+  .kpi { border: 1px solid #ccc; border-radius: 4px; padding: 8px; }
+  .kpi-label { font: 11px sans-serif; color: #555; text-transform: uppercase; }
+  .kpi-value { font-size: 19px; margin-top: 4px; }
+  .sub { font: 11px sans-serif; color: #777; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  h2 { font-size: 14px; color: #1f3a2d; border-bottom: 1px solid #ddd; padding-bottom: 3px; }
+  .chart rect { fill: #1f3a2d; }
+  .chart .lbl, .chart .val { font: 10px sans-serif; fill: #444; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  td { padding: 3px 6px; border-bottom: 1px solid #eee; }
+  td:last-child { text-align: right; }
+  ul { margin: 4px 0 4px 18px; padding: 0; font-size: 12px; }
+  footer { margin-top: 18px; border-top: 1px solid #ccc; font: 12px sans-serif; color: #555; }
+  .note { margin-top: 6px; }
+  @media print { body { margin: 0; } @page { size: A4; margin: 12mm; } }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Benjamin&#x27;s at The Landsby — Feedback Theming</h1>
+    <div class="week">resident feedback review queue</div>
+  </div>
+  <div class="watermark">SAMPLE DATA — synthetic, for demonstration</div>
+</header>
+<h2>Resident feedback themes &mdash; review queue</h2><p class="explain">Theme <strong>counts are computed by code</strong> (keyword matches over the survey comments). The <strong>labels are AI suggestions</strong> drafted from sample phrases only &mdash; the AI never sees or changes a number. Each label is shown <strong>pending a person's approval</strong> before it is used anywhere.</p><p class="explain">55 comments themed across 3 themes.</p><div class="themes"><section class="theme"><div class="suggested">Suggested label &mdash; pending approval</div><div class="label">Service — e.g. “Wonderful staff, felt very looked after.”</div><div class="count">26 comment(s) <span class="tag">count computed by code</span></div><div class="key">theme key: <code>service</code></div><div class="phrases">Sample phrases:<ul><li>Wonderful staff, felt very looked after.</li><li>Service was warm and unhurried.</li></ul></div></section><section class="theme"><div class="suggested">Suggested label &mdash; pending approval</div><div class="label">Food Quality — e.g. “Lovely lunch as always.”</div><div class="count">15 comment(s) <span class="tag">count computed by code</span></div><div class="key">theme key: <code>food_quality</code></div><div class="phrases">Sample phrases:<ul><li>Lovely lunch as always.</li></ul></div></section><section class="theme"><div class="suggested">Suggested label &mdash; pending approval</div><div class="label">Soup Consistency — e.g. “Soup a little salty today.”</div><div class="count">14 comment(s) <span class="tag">count computed by code</span></div><div class="key">theme key: <code>soup_consistency</code></div><div class="phrases">Sample phrases:<ul><li>Soup a little salty today.</li></ul></div></section></div><style>.explain{font:13px sans-serif;color:#444;}.themes{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:14px;}.theme{border:1px solid #ccc;border-radius:5px;padding:10px;}.suggested{font:10px sans-serif;text-transform:uppercase;letter-spacing:.04em;background:#fff3cd;border:1px solid #b8860b;color:#7a5800;border-radius:3px;padding:2px 6px;display:inline-block;}.label{font-size:16px;color:#1f3a2d;margin:8px 0 4px;}.count{font:13px sans-serif;color:#222;}.tag{font:10px sans-serif;color:#555;background:#eef3ef;border-radius:3px;padding:1px 5px;}.key{font:11px sans-serif;color:#777;margin-top:4px;}.phrases{font:12px sans-serif;color:#444;margin-top:6px;}</style>
+<footer><strong>Data quality</strong><div class="note">33 data-quality note(s):<ul><li>flash-survey.csv line 7: row has no comment</li><li>flash-survey.csv line 8: row has no comment</li><li>flash-survey.csv line 9: row has no comment</li><li>flash-survey.csv line 10: row has no comment</li><li>flash-survey.csv line 17: row has no comment</li><li>flash-survey.csv line 20: row has no comment</li><li>flash-survey.csv line 23: row has no comment</li><li>flash-survey.csv line 24: row has no comment</li><li>flash-survey.csv line 25: row has no comment</li><li>flash-survey.csv line 29: row has no comment</li><li>flash-survey.csv line 31: row has no comment</li><li>flash-survey.csv line 32: row has no comment</li><li>flash-survey.csv line 38: row has no comment</li><li>flash-survey.csv line 40: row has no comment</li><li>flash-survey.csv line 43: row has no comment</li><li>flash-survey.csv line 47: row has no comment</li><li>flash-survey.csv line 50: row has no comment</li><li>flash-survey.csv line 51: row has no comment</li><li>flash-survey.csv line 53: row has no comment</li><li>flash-survey.csv line 54: row has no comment</li><li>flash-survey.csv line 56: row has no comment</li><li>flash-survey.csv line 60: row has no comment</li><li>flash-survey.csv line 64: row has no comment</li><li>flash-survey.csv line 65: row has no comment</li><li>flash-survey.csv line 70: row has no comment</li><li>flash-survey.csv line 72: row has no comment</li><li>flash-survey.csv line 74: row has no comment</li><li>flash-survey.csv line 76: row has no comment</li><li>flash-survey.csv line 80: row has no comment</li><li>flash-survey.csv line 83: row has no comment</li><li>flash-survey.csv line 85: row has no comment</li><li>flash-survey.csv line 87: row has no comment</li><li>flash-survey.csv line 88: row has no comment</li></ul></div></footer>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Benjamin&#x27;s at The Landsby — Demand forecast</title>
+<style>
+  body { font-family: Georgia, 'Times New Roman', serif; color: #222; margin: 24px auto; max-width: 960px; }
+  header { display: flex; justify-content: space-between; align-items: baseline;
+            border-bottom: 3px double #1f3a2d; padding-bottom: 8px; }
+  h1 { font-size: 22px; margin: 0; color: #1f3a2d; }
+  .watermark { background: #fff3cd; border: 1px solid #b8860b; color: #7a5800;
+                padding: 3px 10px; font: 12px sans-serif; border-radius: 3px; }
+  .week { font: 13px sans-serif; color: #555; }
+  .kpis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin: 16px 0; }
+  .kpi { border: 1px solid #ccc; border-radius: 4px; padding: 8px; }
+  .kpi-label { font: 11px sans-serif; color: #555; text-transform: uppercase; }
+  .kpi-value { font-size: 19px; margin-top: 4px; }
+  .sub { font: 11px sans-serif; color: #777; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  h2 { font-size: 14px; color: #1f3a2d; border-bottom: 1px solid #ddd; padding-bottom: 3px; }
+  .chart rect { fill: #1f3a2d; }
+  .chart .lbl, .chart .val { font: 10px sans-serif; fill: #444; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  td { padding: 3px 6px; border-bottom: 1px solid #eee; }
+  td:last-child { text-align: right; }
+  ul { margin: 4px 0 4px 18px; padding: 0; font-size: 12px; }
+  footer { margin-top: 18px; border-top: 1px solid #ccc; font: 12px sans-serif; color: #555; }
+  .note { margin-top: 6px; }
+  @media print { body { margin: 0; } @page { size: A4; margin: 12mm; } }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Benjamin&#x27;s at The Landsby — Demand forecast</h1>
+    <div class="week">next week — weighted moving average</div>
+  </div>
+  <div class="watermark">SAMPLE DATA — synthetic, for demonstration</div>
+</header>
+
+<style>
+  .explain { font: 13px sans-serif; color: #555; }
+  .dfchart { width: 100%; height: auto; margin: 8px 0 4px; }
+  .dfchart rect.lunch { fill: #1f3a2d; }
+  .dfchart rect.afternoon { fill: #7a5800; }
+  .dfchart rect.evening { fill: #3a5a7a; }
+  .dfchart .dlbl { font: 10px sans-serif; fill: #444; }
+  .dfchart .vlbl { font: 9px sans-serif; fill: #444; }
+  .legend { font: 11px sans-serif; color: #555; margin: 2px 0 8px; }
+  .legend span { margin-right: 14px; }
+  .sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px;
+        margin-right: 4px; vertical-align: middle; }
+  td.num { text-align: right; }
+  td.ev { color: #7a5800; font: 11px sans-serif; }
+  .basis { font: 11px sans-serif; color: #777; }
+</style>
+<h2>Demand forecast — next week, covers by day and daypart</h2><p class="explain">This is a transparent weighted moving average, not a machine-learning forecast. Each cell is the weighted mean of the three most recent past occurrences of that weekday and daypart, most-recent first. The weights and any event adjustments are the only knobs — both are shown below so a manager can interrogate every number by hand.</p><p>Weights (most-recent first): <strong>0.5, 0.3, 0.2</strong>. Built from history up to Saturday 6 June. Forecast total for the week: <strong>352</strong> covers across 7 days.</p><svg viewBox="0 0 618 202" class="dfchart" role="img" aria-label="Forecast covers by day and daypart"><line x1="8" y1="168" x2="610" y2="168" stroke="#999" stroke-width="1"/><rect class="lunch" x="12" y="168" width="24" height="0" rx="1"/><text class="vlbl" x="24.0" y="165" text-anchor="middle">0</text><rect class="afternoon" x="38" y="168" width="24" height="0" rx="1"/><text class="vlbl" x="50.0" y="165" text-anchor="middle">0</text><rect class="evening" x="64" y="168" width="24" height="0" rx="1"/><text class="vlbl" x="76.0" y="165" text-anchor="middle">0</text><text class="dlbl" x="51.0" y="182" text-anchor="middle">Sun</text><text class="dlbl" x="51.0" y="194" text-anchor="middle">06-07</text><rect class="lunch" x="98" y="48" width="24" height="120" rx="1"/><text class="vlbl" x="110.0" y="45" text-anchor="middle">30</text><rect class="afternoon" x="124" y="168" width="24" height="0" rx="1"/><text class="vlbl" x="136.0" y="165" text-anchor="middle">0</text><rect class="evening" x="150" y="168" width="24" height="0" rx="1"/><text class="vlbl" x="162.0" y="165" text-anchor="middle">0</text><text class="dlbl" x="137.0" y="182" text-anchor="middle">Mon</text><text class="dlbl" x="137.0" y="194" text-anchor="middle">06-08</text><rect class="lunch" x="184" y="63" width="24" height="105" rx="1"/><text class="vlbl" x="196.0" y="60" text-anchor="middle">26</text><rect class="afternoon" x="210" y="82" width="24" height="86" rx="1"/><text class="vlbl" x="222.0" y="79" text-anchor="middle">21</text><rect class="evening" x="236" y="132" width="24" height="36" rx="1"/><text class="vlbl" x="248.0" y="129" text-anchor="middle">9</text><text class="dlbl" x="223.0" y="182" text-anchor="middle">Tue</text><text class="dlbl" x="223.0" y="194" text-anchor="middle">06-09</text><rect class="lunch" x="270" y="60" width="24" height="108" rx="1"/><text class="vlbl" x="282.0" y="57" text-anchor="middle">27</text><rect class="afternoon" x="296" y="90" width="24" height="78" rx="1"/><text class="vlbl" x="308.0" y="87" text-anchor="middle">19</text><rect class="evening" x="322" y="126" width="24" height="42" rx="1"/><text class="vlbl" x="334.0" y="123" text-anchor="middle">10</text><text class="dlbl" x="309.0" y="182" text-anchor="middle">Wed</text><text class="dlbl" x="309.0" y="194" text-anchor="middle">06-10</text><rect class="lunch" x="356" y="55" width="24" height="113" rx="1"/><text class="vlbl" x="368.0" y="52" text-anchor="middle">28</text><rect class="afternoon" x="382" y="79" width="24" height="89" rx="1"/><text class="vlbl" x="394.0" y="76" text-anchor="middle">22</text><rect class="evening" x="408" y="122" width="24" height="46" rx="1"/><text class="vlbl" x="420.0" y="119" text-anchor="middle">11</text><text class="dlbl" x="395.0" y="182" text-anchor="middle">Thu</text><text class="dlbl" x="395.0" y="194" text-anchor="middle">06-11</text><rect class="lunch" x="442" y="43" width="24" height="125" rx="1"/><text class="vlbl" x="454.0" y="40" text-anchor="middle">31</text><rect class="afternoon" x="468" y="55" width="24" height="113" rx="1"/><text class="vlbl" x="480.0" y="52" text-anchor="middle">28</text><rect class="evening" x="494" y="111" width="24" height="57" rx="1"/><text class="vlbl" x="506.0" y="108" text-anchor="middle">14</text><text class="dlbl" x="481.0" y="182" text-anchor="middle">Fri</text><text class="dlbl" x="481.0" y="194" text-anchor="middle">06-12</text><rect class="lunch" x="528" y="18" width="24" height="150" rx="1"/><text class="vlbl" x="540.0" y="15" text-anchor="middle">37</text><rect class="afternoon" x="554" y="83" width="24" height="85" rx="1"/><text class="vlbl" x="566.0" y="80" text-anchor="middle">21</text><rect class="evening" x="580" y="98" width="24" height="70" rx="1"/><text class="vlbl" x="592.0" y="95" text-anchor="middle">17</text><text class="dlbl" x="567.0" y="182" text-anchor="middle">Sat</text><text class="dlbl" x="567.0" y="194" text-anchor="middle">06-13</text></svg><div class="legend"><span><span class="sw" style="background:#1f3a2d"></span>Lunch</span><span><span class="sw" style="background:#7a5800"></span>Afternoon</span><span><span class="sw" style="background:#3a5a7a"></span>Evening</span></div><table><tr><td><strong>Date</strong></td><td><strong>Day</strong></td><td><strong>Daypart</strong></td><td><strong>Forecast covers</strong></td><td><strong>On the books</strong></td><td><strong>Basis (recent covers)</strong></td><td><strong>Event</strong></td></tr><tr><td>2026-06-07</td><td>Sunday</td><td>Lunch</td><td class="num">0</td><td class="num">0</td><td class="basis">—</td><td class="ev"></td></tr><tr><td>2026-06-07</td><td>Sunday</td><td>Afternoon</td><td class="num">0</td><td class="num">0</td><td class="basis">—</td><td class="ev"></td></tr><tr><td>2026-06-07</td><td>Sunday</td><td>Evening</td><td class="num">0</td><td class="num">0</td><td class="basis">—</td><td class="ev"></td></tr><tr><td>2026-06-08</td><td>Monday</td><td>Lunch</td><td class="num">30</td><td class="num">0</td><td class="basis">29 / 29 / 32</td><td class="ev"></td></tr><tr><td>2026-06-08</td><td>Monday</td><td>Afternoon</td><td class="num">0</td><td class="num">0</td><td class="basis">—</td><td class="ev"></td></tr><tr><td>2026-06-08</td><td>Monday</td><td>Evening</td><td class="num">0</td><td class="num">0</td><td class="basis">—</td><td class="ev"></td></tr><tr><td>2026-06-09</td><td>Tuesday</td><td>Lunch</td><td class="num">26</td><td class="num">0</td><td class="basis">22 / 27 / 34</td><td class="ev"></td></tr><tr><td>2026-06-09</td><td>Tuesday</td><td>Afternoon</td><td class="num">21</td><td class="num">0</td><td class="basis">25 / 20 / 14</td><td class="ev"></td></tr><tr><td>2026-06-09</td><td>Tuesday</td><td>Evening</td><td class="num">9</td><td class="num">0</td><td class="basis">8 / 11 / 8</td><td class="ev"></td></tr><tr><td>2026-06-10</td><td>Wednesday</td><td>Lunch</td><td class="num">27</td><td class="num">0</td><td class="basis">28 / 25 / 26</td><td class="ev"></td></tr><tr><td>2026-06-10</td><td>Wednesday</td><td>Afternoon</td><td class="num">19</td><td class="num">0</td><td class="basis">18 / 24 / 15</td><td class="ev"></td></tr><tr><td>2026-06-10</td><td>Wednesday</td><td>Evening</td><td class="num">10</td><td class="num">0</td><td class="basis">12 / 7 / 11</td><td class="ev"></td></tr><tr><td>2026-06-11</td><td>Thursday</td><td>Lunch</td><td class="num">28</td><td class="num">0</td><td class="basis">28 / 25 / 32</td><td class="ev"></td></tr><tr><td>2026-06-11</td><td>Thursday</td><td>Afternoon</td><td class="num">22</td><td class="num">0</td><td class="basis">24 / 21 / 19</td><td class="ev"></td></tr><tr><td>2026-06-11</td><td>Thursday</td><td>Evening</td><td class="num">11</td><td class="num">0</td><td class="basis">11 / 16 / 5</td><td class="ev"></td></tr><tr><td>2026-06-12</td><td>Friday</td><td>Lunch</td><td class="num">31</td><td class="num">0</td><td class="basis">37 / 29 / 18</td><td class="ev"></td></tr><tr><td>2026-06-12</td><td>Friday</td><td>Afternoon</td><td class="num">28</td><td class="num">0</td><td class="basis">29 / 25 / 30</td><td class="ev"></td></tr><tr><td>2026-06-12</td><td>Friday</td><td>Evening</td><td class="num">14</td><td class="num">0</td><td class="basis">11 / 15 / 21</td><td class="ev"></td></tr><tr><td>2026-06-13</td><td>Saturday</td><td>Lunch</td><td class="num">37</td><td class="num">0</td><td class="basis">30 / 45 / 43</td><td class="ev"></td></tr><tr><td>2026-06-13</td><td>Saturday</td><td>Afternoon</td><td class="num">21</td><td class="num">0</td><td class="basis">20 / 25 / 17</td><td class="ev"></td></tr><tr><td>2026-06-13</td><td>Saturday</td><td>Evening</td><td class="num">17</td><td class="num">0</td><td class="basis">23 / 5 / 22</td><td class="ev"></td></tr></table><p class="basis">"On the books" is current OpenTable party-size sum for that service, shown for cross-check; it is not part of the average. "Basis" lists the covers from the three source dates, most-recent first.</p>
+<footer><strong>Data quality</strong><div class="note">3 data-quality note(s):<ul><li>cubigo-sales.csv line 7451: unreadable net &#x27;&#x27;</li><li>cubigo-sales.csv line 7452: unreadable covers &#x27;two&#x27;</li><li>1 unparseable date value(s) excluded from history: 2026-13-01</li></ul></div></footer>
+</body>
+</html>

@@ -1,0 +1,20 @@
+date,item,qty,reason
+2026-04-14,Shepherd's pie,4,expired
+2026-04-16,Roast chicken,3,over-prep
+2026-04-24,Coffee,2,spoilage
+2026-04-20,Glass of house wine,5,expired
+2026-04-21,Coffee,2,expired
+2026-04-30,Roast chicken,2,expired
+2026-04-29,Matzo ball soup,5,over-prep
+2026-05-01,Soup of the day,5,expired
+2026-05-06,Shepherd's pie,1,expired
+2026-05-09,Paneer & spinach curry,2,over-prep
+2026-05-14,Grilled salmon,5,expired
+2026-05-11,Coffee,2,spoilage
+2026-05-20,Roast chicken,2,returned
+2026-05-22,Matzo ball soup,4,over-prep
+2026-05-30,Coffee,2,trim
+2026-05-30,Vegetable biryani,1,expired
+2026-05-30,Shepherd's pie,2,trim
+2026-06-06,Soup of the day,1,trim
+2026-06-01,Matzo ball soup,3,expired

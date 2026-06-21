@@ -1,0 +1,9 @@
+{
+  "site_name": "Benjamin's at The Landsby",
+  "gates": {
+    "covers": {"green": 280, "amber": 240},
+    "spend_per_head": {"green": 24, "amber": 21},
+    "labour_pct": {"green": 0.32, "amber": 0.38},
+    "satisfaction": {"green": 4.3, "amber": 4.0}
+  }
+}
