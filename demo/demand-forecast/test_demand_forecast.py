@@ -1,5 +1,8 @@
 import csv
 import json
+import shutil
+import subprocess
+import sys
 import unittest
 from datetime import date, timedelta
 from pathlib import Path
@@ -151,6 +154,23 @@ class TestDemandForecast(unittest.TestCase):
             Path("demand-forecast.html").read_text(),
             "Committed HTML drifted - re-run build_demand_forecast.py",
         )
+
+
+class TestSampleFlag(unittest.TestCase):
+    """`--sample` must work from any cwd and must not touch the committed
+    HTML — it writes into out/ instead."""
+
+    def tearDown(self):
+        shutil.rmtree(Path(__file__).parent / "out", ignore_errors=True)
+
+    def test_sample_flag_writes_to_out_dir(self):
+        out_dir = Path(__file__).parent / "out"
+        shutil.rmtree(out_dir, ignore_errors=True)
+        subprocess.run(
+            [sys.executable, "build_demand_forecast.py", "--sample"],
+            check=True,
+        )
+        self.assertTrue((out_dir / "demand-forecast.html").exists())
 
 
 if __name__ == "__main__":

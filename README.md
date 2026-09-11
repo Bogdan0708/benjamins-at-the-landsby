@@ -4,7 +4,19 @@
 
 Prepared by **Vasile Bogdan Godja** · godjabogdan@gmail.com · June 2026
 
+[![tests](https://github.com/Bogdan0708/benjamins-at-the-landsby/actions/workflows/ci.yml/badge.svg)](https://github.com/Bogdan0708/benjamins-at-the-landsby/actions/workflows/ci.yml)
+
 ---
+
+## Three tools, end to end
+
+| Tool | Input | Output | Run |
+|---|---|---|---|
+| Settlement reconciliation (`demo/cubigo-square-recon`) | Cubigo + Square CSV exports | variance report with flagged lines | `python demo/cubigo-square-recon/build_cubigo_square_recon.py --sample` |
+| Daily briefing (`demo/daily-briefing`) | bookings, specials, training rota | one-page pre-service huddle sheet | `python demo/daily-briefing/build_daily_briefing.py --sample` |
+| Demand forecast (`demo/demand-forecast`) | 8 weeks Cubigo covers + bookings | next-week covers by day and daypart | `python demo/demand-forecast/build_demand_forecast.py --sample` |
+
+Each command above can be run from the repo root with no setup beyond Python 3 (standard library only) — it reads the tool's own bundled `sample-data/` and writes its output to `demo/<tool>/out/`, leaving the committed sample HTML untouched. All 13 tools live under `demo/`, each with its own `README.md`, `config.json`, `sample-data/`, tests (`test_*.py`), and a committed sample output. Run any tool's tests directly with `cd demo/<tool> && python3 -m unittest -v`, or run everything from the repo root with `pytest -q`.
 
 ## The documents
 

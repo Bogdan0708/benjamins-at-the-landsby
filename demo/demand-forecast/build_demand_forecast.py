@@ -1,3 +1,4 @@
+import argparse
 import html
 import json
 import sys
@@ -6,7 +7,8 @@ from datetime import timedelta
 from pathlib import Path
 import benjamins_common as bc
 
-CONFIG = json.loads((Path(__file__).parent / "config.json").read_text())
+TOOL_DIR = Path(__file__).parent
+CONFIG = json.loads((TOOL_DIR / "config.json").read_text())
 CUBIGO_COLS = ["date", "time", "check_id", "item", "category", "covers", "net", "guest_type"]
 BOOKINGS_COLS = ["date", "time", "party_size", "status", "source"]
 DAYPARTS = ["Lunch", "Afternoon", "Evening"]
@@ -269,14 +271,35 @@ def render(metrics):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--sample", action="store_true",
+        help="Build from this tool's bundled sample-data/, regardless of the "
+             "current directory, and write output to out/ instead of "
+             "overwriting the committed HTML.")
+    # parse_known_args: main() is also called directly (with no args) by the
+    # test suite, so unrelated argv (e.g. a pytest invocation's own flags)
+    # must not be treated as an error here.
+    args, _unknown = parser.parse_known_args()
+
+    if args.sample:
+        cubigo_path = TOOL_DIR / "sample-data" / "cubigo-sales.csv"
+        bookings_path = TOOL_DIR / "sample-data" / "opentable-bookings.csv"
+        out_dir = TOOL_DIR / "out"
+        out_dir.mkdir(exist_ok=True)
+        out_path = out_dir / "demand-forecast.html"
+    else:
+        cubigo_path = "sample-data/cubigo-sales.csv"
+        bookings_path = "sample-data/opentable-bookings.csv"
+        out_path = Path("demand-forecast.html")
+
     try:
-        metrics = compute("sample-data/cubigo-sales.csv",
-                          "sample-data/opentable-bookings.csv", CONFIG)
+        metrics = compute(cubigo_path, bookings_path, CONFIG)
     except bc.BenjaminsError as e:
         print(f"Could not build the demand forecast: {e}", file=sys.stderr)
         raise SystemExit(1)
-    Path("demand-forecast.html").write_text(render(metrics))
-    print("Wrote demand-forecast.html")
+    out_path.write_text(render(metrics))
+    print(f"Wrote {out_path}")
 
 
 if __name__ == "__main__":
