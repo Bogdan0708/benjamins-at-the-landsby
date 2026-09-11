@@ -1,3 +1,6 @@
+import shutil
+import subprocess
+import sys
 import unittest, csv, json
 from pathlib import Path
 import build_cubigo_square_recon as recon
@@ -124,6 +127,24 @@ class TestRecon(unittest.TestCase):
         self.assertEqual(
             fresh, Path("cubigo-square-recon.html").read_text(),
             "Committed HTML drifted - re-run build_cubigo_square_recon.py")
+
+
+class TestSampleFlag(unittest.TestCase):
+    """`--sample` must work from any cwd and must not touch the committed
+    HTML/CSV — it writes into out/ instead."""
+
+    def tearDown(self):
+        shutil.rmtree(Path(__file__).parent / "out", ignore_errors=True)
+
+    def test_sample_flag_writes_to_out_dir(self):
+        out_dir = Path(__file__).parent / "out"
+        shutil.rmtree(out_dir, ignore_errors=True)
+        subprocess.run(
+            [sys.executable, "build_cubigo_square_recon.py", "--sample"],
+            check=True,
+        )
+        self.assertTrue((out_dir / "cubigo-square-recon.html").exists())
+        self.assertTrue((out_dir / "mismatches.csv").exists())
 
 
 if __name__ == "__main__":

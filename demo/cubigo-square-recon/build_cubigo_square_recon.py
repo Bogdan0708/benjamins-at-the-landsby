@@ -1,3 +1,4 @@
+import argparse
 import csv
 import html
 import json
@@ -5,6 +6,8 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 import benjamins_common as bc
+
+TOOL_DIR = Path(__file__).parent
 
 CONFIG = json.loads((Path(__file__).parent / "config.json").read_text())
 CUBIGO_COLS = ["date", "time", "check_id", "item", "category", "covers", "net", "guest_type"]
@@ -167,15 +170,37 @@ def render(metrics):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--sample", action="store_true",
+        help="Build from this tool's bundled sample-data/, regardless of the "
+             "current directory, and write output to out/ instead of "
+             "overwriting the committed HTML/CSV.")
+    # parse_known_args: main() is also called directly (with no args) by the
+    # test suite and by other tools' scripts, so unrelated argv (e.g. a
+    # pytest invocation's own flags) must not be treated as an error here.
+    args, _unknown = parser.parse_known_args()
+
+    if args.sample:
+        cubigo_path = TOOL_DIR / "sample-data" / "cubigo-sales.csv"
+        square_path = TOOL_DIR / "sample-data" / "square-settlements.csv"
+        out_dir = TOOL_DIR / "out"
+        out_dir.mkdir(exist_ok=True)
+        html_out = out_dir / "cubigo-square-recon.html"
+        csv_out = out_dir / "mismatches.csv"
+    else:
+        cubigo_path = "sample-data/cubigo-sales.csv"
+        square_path = "sample-data/square-settlements.csv"
+        html_out = Path("cubigo-square-recon.html")
+        csv_out = Path("mismatches.csv")
+
     try:
-        metrics = compute("sample-data/cubigo-sales.csv",
-                          "sample-data/square-settlements.csv",
-                          CONFIG)
+        metrics = compute(cubigo_path, square_path, CONFIG)
     except bc.BenjaminsError as e:
         print(f"Could not build the reconciliation: {e}", file=sys.stderr)
         raise SystemExit(1)
-    Path("cubigo-square-recon.html").write_text(render(metrics))
-    with open("mismatches.csv", "w", newline="", encoding="utf-8") as f:
+    html_out.write_text(render(metrics))
+    with open(csv_out, "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["date", "till_net", "sq_gross", "sq_net", "ratio", "reason"])
         for r in metrics["exceptions"]:
@@ -187,7 +212,7 @@ def main():
                 "" if r["ratio"] is None else r["ratio"],
                 _reason_text(r["reasons"]),
             ])
-    print("Wrote cubigo-square-recon.html and mismatches.csv")
+    print(f"Wrote {html_out} and {csv_out}")
 
 
 if __name__ == "__main__":

@@ -14,6 +14,7 @@ Run from inside demo/daily-briefing/:
 
 Python standard library only. Same input always produces the same output.
 """
+import argparse
 import html
 import json
 import sys
@@ -21,7 +22,8 @@ from pathlib import Path
 
 import benjamins_common as bc
 
-CONFIG = json.loads((Path(__file__).parent / "config.json").read_text())
+TOOL_DIR = Path(__file__).parent
+CONFIG = json.loads((TOOL_DIR / "config.json").read_text())
 
 BOOKINGS_COLUMNS = ["date", "time", "party_size", "status", "source"]
 SPECIALS_COLUMNS = ["date", "dish", "description_seed", "allergens"]
@@ -200,19 +202,40 @@ def render(metrics):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--sample", action="store_true",
+        help="Build from this tool's bundled sample-data/, regardless of the "
+             "current directory, and write output to out/ instead of "
+             "overwriting the committed HTML.")
+    # parse_known_args: main() is also called directly (with no args) by the
+    # test suite, so unrelated argv (e.g. a pytest invocation's own flags)
+    # must not be treated as an error here.
+    args, _unknown = parser.parse_known_args()
+
+    if args.sample:
+        bookings_path = TOOL_DIR / "sample-data" / "opentable-bookings.csv"
+        specials_path = TOOL_DIR / "sample-data" / "specials.csv"
+        training_path = TOOL_DIR / "sample-data" / "training-rota.csv"
+        out_dir = TOOL_DIR / "out"
+        out_dir.mkdir(exist_ok=True)
+        out_path = out_dir / "daily-briefing.html"
+    else:
+        bookings_path = "sample-data/opentable-bookings.csv"
+        specials_path = "sample-data/specials.csv"
+        training_path = "sample-data/training-rota.csv"
+        out_path = Path("daily-briefing.html")
+
     try:
         metrics = compute(
-            "sample-data/opentable-bookings.csv",
-            "sample-data/specials.csv",
-            "sample-data/training-rota.csv",
-            CONFIG["briefing_date"],
+            bookings_path, specials_path, training_path, CONFIG["briefing_date"],
         )
         html_out = render(metrics)
     except bc.BenjaminsError as e:
         print(f"Could not build the daily briefing: {e}", file=sys.stderr)
         raise SystemExit(1)
-    Path("daily-briefing.html").write_text(html_out, encoding="utf-8")
-    print(f"Wrote daily-briefing.html "
+    out_path.write_text(html_out, encoding="utf-8")
+    print(f"Wrote {out_path} "
           f"({metrics['booking_count']} bookings, {len(metrics['specials'])} specials, "
           f"{len(metrics['training'])} training)")
 
